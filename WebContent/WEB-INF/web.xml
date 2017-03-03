@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>myday18</display-name>
+    <session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+    <!-- 事件源注册事件监听器，由容器完成
+    <listener>
+		<listener-class>com.xjtu.listener.SystemListener</listener-class>
+	</listener> 
+	<listener>
+		<listener-class>com.xjtu.listener.MyServletContextListener</listener-class>			
+	</listener>
+	<listener>
+		<listener-class>com.xjtu.listener.MyServletRequestListener</listener-class>
+	</listener>	
+	<listener>
+		<listener-class>com.xjtu.listener.CallListener</listener-class>
+	</listener>	
+	<listener>
+		<listener-class>com.xjtu.listener.MyHttpSessionListener</listener-class>
+	</listener>	
+	<listener>
+		<listener-class>com.xjtu.listener.SessionScanner</listener-class>
+	</listener>	
+	
+	<listener>
+		<listener-class>com.xjtu.listener.OnlineListener</listener-class>
+	</listener>	
+	监听器 注意 三个域对象 , 即监听的是三个域对象
+	
+	
+	
+	
+	<listener>
+		<listener-class>com.xjtu.listener.AttributeListener</listener-class>
+	</listener>
+	-->
+	  <listener>
+		<listener-class>com.xjtu.listener.KickListener</listener-class>
+	</listener>
+
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.xjtu.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>KickServlet</servlet-name>
+    <servlet-class>com.xjtu.servlet.KickServlet</servlet-class>
+  </servlet>
+
+
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>KickServlet</servlet-name>
+    <url-pattern>/KickServlet</url-pattern>
+  </servlet-mapping>		
+</web-app>
